@@ -3,6 +3,7 @@
 #include <map>
 #include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -26,6 +27,10 @@ int main() {
         else
             airports[str_temp]++;
     }
+
+    cout << "All airport traffic counts:" << endl;
+    for (auto pair : airports)
+        cout << pair.first << " " << pair.second << endl;
 
 // Milestone 2: Add code that finds the highest traffic count to represent the busiest airport. Print all airports that have this maximum count (in other words, handle ties).
 //     Your driver program should build the map, print all counts, and then print the busiest airport(s) and their count. 
